@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>Code Quiz</title>
+</head>
+<body>
+<nav class="row-span-1 bg-orange-600 py-8">
+  <div class="grid md:grid-cols-2 lg:grid-cols-5">
+    <div class="lg:col-start-3 text-center">
+      <h1 class="text-2xl text-orange-100">Quiz Challenge</h1>
+    </div> <!-- col-start-3 -->
+    <!-- Timer container -->
+    <div
+      class="lg:col-start-5 p-2 bg-orange-500 items-center leading-none rounded-full flex lg:inline-flex lg:w-1/2 mx-auto text-center"
+      role="alert">
+      <span class="font-semibold text-orange-100 mx-2 text-left">Seconds Left</span>
+      <span id="seconds"
+            class="flex text-orange-100 rounded-full bg-orange-400 px-2 py-1 ml-2 text-xs font-bold">60</span>
+    </div>  <!-- Timer container ends -->
+  </div> <!-- .grid -->
+</nav>
+<section class="grid grid-flow-col sm:grid-col-1 lg:grid-cols-3 mt-20">
+  <div class="col-start-2 lg:text-center ml-4">
+    <p id="title" class="text-orange-600 text-3xl">JavaScript Quiz</p>
+  </div> <!-- .col-start-2 -->
+  <div id="questionSection" class="col-start-2 text-center"> <!-- Questions section  -->
+    <p id="gameRule" class="mt-10 mb-5 mx-3">Answer the following JavaScript questions within 60 seconds. Incorrect answers will subtract from your score time by ten seconds.</p>
+  </div> <!-- .col-start-2 -->
+  <div class="col-start-2 text-center">
+    <div id="optCount" class="lg:p-3"></div> <!-- Answers  section  -->
+  </div> <!-- .col-start-2 -->
+  <div class="col-start-2 lg:text-center">
+    <div id="highscoreCont"> </div> <!-- Highscore  section  -->
+    <div id="highscoreBtns" class="mt-4"></div>
+  </div> <!-- .col-start-2 -->
+  <div class="col-start-2 text-center">
+    <div id="validationCont"></div><!-- Wrong or Correct answers section  -->
+  </div> <!-- .col-start-2 -->
+  <div id="submitCont" class="col-start-2 text-center"><!-- Buttons section  -->
+    <button id="startBtn"
+            class="focus:outline-none bg-transparent hover:bg-orange-600 text-orange-600 font-semibold hover:text-white py-4 px-4 border border-orange-600 hover:border-transparent rounded-full block mx-auto">
+      Start Quiz
+    </button>
+  </div> <!-- .col-start-2 -->
+</section>
+<!-- Script links -->
+<script src="script.js"></script>
+</body>
+</html>
